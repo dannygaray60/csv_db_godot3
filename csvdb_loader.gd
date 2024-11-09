@@ -14,7 +14,7 @@ func load_databases() -> void:
 		if f.ends_with(file_ext) == true:
 			_load_file(dbs_path+"/"+f)
 
-func get_db(db_name) -> Dictionary:
+func get_db(db_name:String) -> Dictionary:
 	if _databases.keys().has(db_name) == true:
 		return _databases[db_name]
 	else:
