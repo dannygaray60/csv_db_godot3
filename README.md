@@ -20,8 +20,13 @@ Gets the CSV values you specify via the filename (omitting the extension) and wi
 ##### Then you can load the data in this way:
 
     var weapons : Dictionary = Csvdb_loader.get_db("weapons")
-    for weapon in weapons:
-	    print(weapon["name"])
+
+    ## get all weapons
+    for weapon_key in weapons:
+	    print(weapon_key["name"])
+
+     ## or using a key get the weapon data:
+     print(weapons["whip"]["power"])
 
 ---
 ## Script by: dannygaray60
