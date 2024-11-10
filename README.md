@@ -23,7 +23,7 @@ Gets the CSV values you specify via the filename (omitting the extension) and wi
 
     ## get all weapons
     for weapon_key in weapons:
-	    print(weapon_key["name"])
+	    print(weapons[weapon_key])
 
      ## or using a key get the weapon data:
      print(weapons["whip"]["power"])
