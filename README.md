@@ -14,7 +14,7 @@ Download the `csvdb_loader.gd` file and add it to any part of your project. Then
 Gets the CSV values you specify via the filename (omitting the extension) and will store it in a Dictionary.
 
 ### Example of use
-##### Assuming you have a database (enemies.csvdb) like this:
+##### Assuming you have a database (weapons.csvdb) like this:
 ![](https://raw.githubusercontent.com/dannygaray60/csv_db_godot3/refs/heads/main/example.png)
 
 ##### Then you can load the data in this way:
