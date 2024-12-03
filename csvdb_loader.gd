@@ -10,7 +10,7 @@ func _ready() -> void:
 	load_databases()
 
 func load_databases() -> void:
-	for f in FuncsFiles.get_files(dbs_path):
+	for f in get_files(dbs_path):
 		if f.ends_with(file_ext) == true:
 			_load_file(dbs_path+"/"+f)
 
@@ -69,3 +69,19 @@ func _load_file(f_path:String) -> void:
 	
 	else:
 		print_debug("Error loading file: "+f_path+" err:"+str(err))
+
+## listar archivos
+func get_files(path:String) -> Array:
+	var files : Array = []
+	var dir := Directory.new()
+	var err_open : int = dir.open(path)
+	var err_list_dir : int = dir.list_dir_begin(true)
+	if err_open == OK and err_list_dir == OK:
+		var file = dir.get_next()
+		while file != '':
+			files += [file]
+			file = dir.get_next()
+		
+		return files
+	else:
+		return []
